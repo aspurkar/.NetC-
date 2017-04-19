@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<a class="link" href="/home/show">Click me</a>
+<br />
+<div id="content">
+
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".link").click(function (e) {
+                e.preventDefault();//suppress redirect
+                var url = $(this).attr('href');
+                // $("#content").load(url);
+                $.get(url, null, function (response) {
+                    $("#content").html(response);
+                });
+            });
+        });
+    </script>
+}

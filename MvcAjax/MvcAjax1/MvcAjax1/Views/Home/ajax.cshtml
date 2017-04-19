@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "ajax";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Using MVC Ajax</h2>
+
+@Ajax.ActionLink("Click me", "show", new AjaxOptions { UpdateTargetId = "content",
+                                                       InsertionMode=System.Web.Mvc.Ajax.InsertionMode.Replace,
+                                                       LoadingElementId="progressbar",
+                                                       OnSuccess="success",OnComplete="complete",OnFailure="error",OnBegin="begin"
+                                                       })
+
+<div id="content">
+   
+</div>
+<div id="progressbar" style="border:solid thin gray;width:150px;display:none;">
+    Loading please wait...
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        function success(response) {
+            alert(response);
+        }
+        function error(error, status) {
+            alert('error callbak');
+            alert(error.responseText);
+        }
+        function complete() {
+            $("#progressbar").fadeOut();
+        }
+        function begin(xhr) {
+            xhr.setRequestHeader('appkey', 'kjsnckdskfw889438948934');
+        }
+    </script>
+}

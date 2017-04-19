@@ -1,0 +1,32 @@
+﻿@model IEnumerable<System.Net.IPAddress>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>showdomains</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>
+               Ip Address
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToString())
+            </td>
+        </tr>
+    }
+    </table>
+</body>
+</html>

@@ -1,0 +1,5 @@
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WcfClient\bin\Debug\WcfClient.exe.config
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WcfClient\bin\Debug\WcfClient.exe
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WcfClient\bin\Debug\WcfClient.pdb
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WcfClient\obj\Debug\WcfClient.exe
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WcfClient\obj\Debug\WcfClient.pdb

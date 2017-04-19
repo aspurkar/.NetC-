@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "AddComment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<MvcAjax2.Models.Comment>
+<style>
+    table td {
+        border:solid thin gray;
+    }
+</style>
+<h2>Comments so far...</h2>
+<div id="comments">
+   
+    @foreach (var c in Model)
+	{
+       @Html.Partial("_Comment", c)
+	}
+</div>
+<h3>Add Your Comment</h3>
+@using(Ajax.BeginForm("addcomment","home",new AjaxOptions{UpdateTargetId="comments",InsertionMode=InsertionMode.InsertAfter}))
+{
+  <label>Your name:</label>  @Html.TextBox("UserName") <br /><br />
+  <label style="vertical-align:top;">Comment</label>  @Html.TextArea("CommentText") <br />
+   <input type="submit" value="Add Comment" />
+}

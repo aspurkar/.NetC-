@@ -1,0 +1,8 @@
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfClient\bin\Debug\WcfClient.exe.config
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfClient\bin\Debug\WcfClient.exe
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfClient\bin\Debug\WcfClient.pdb
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfClient\obj\Debug\WcfClient.exe
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfClient\obj\Debug\WcfClient.pdb
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfClient\bin\Debug\WcfClient.exe.config
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfClient\obj\Debug\WcfClient.exe
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfClient\obj\Debug\WcfClient.pdb

@@ -1,0 +1,11 @@
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfBasic\bin\WcfBasic.dll
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfBasic\bin\WcfBasic.pdb
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfBasic\obj\Debug\WcfBasic.csprojResolveAssemblyReference.cache
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfBasic\obj\Debug\WcfBasic.dll
+C:\Users\ccit\Documents\Visual Studio 2012\Projects\MVCCustom\WcfBasic\WcfBasic\obj\Debug\WcfBasic.pdb
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfBasic\bin\WcfBasic.dll.config
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfBasic\bin\WcfBasic.dll
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfBasic\bin\WcfBasic.pdb
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfBasic\obj\Debug\WcfBasic.csprojResolveAssemblyReference.cache
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfBasic\obj\Debug\WcfBasic.dll
+C:\Users\Aditya\Desktop\Asp . Net proj\WcfBasic\WcfBasic\obj\Debug\WcfBasic.pdb

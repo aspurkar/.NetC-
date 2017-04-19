@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="mydomain.com/mathservice" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="mydomain.com/mathservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="mydomain.com/mathservice/Imports">
+      <xsd:import schemaLocation="http://localhost:1113/MyService.svc?xsd=xsd0" namespace="mydomain.com/mathservice" />
+      <xsd:import schemaLocation="http://localhost:1113/MyService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:1113/MyService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFDemo1" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICalculator_Add_InputMessage">
+    <wsdl:part name="parameters" element="tns:Add" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Add_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Multiply_InputMessage">
+    <wsdl:part name="parameters" element="tns:Multiply" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Multiply_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultiplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Divide_InputMessage">
+    <wsdl:part name="parameters" element="tns:Divide" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Divide_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DivideResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_Divide_MathFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WCFDemo1" name="detail" element="q1:MathFault" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_AddComplex_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComplex" />
+  </wsdl:message>
+  <wsdl:message name="ICalculator_AddComplex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddComplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScientificCalculator_Pow_InputMessage">
+    <wsdl:part name="parameters" element="tns:Pow" />
+  </wsdl:message>
+  <wsdl:message name="IScientificCalculator_Pow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IScientificCalculator_SqaureRoot_InputMessage">
+    <wsdl:part name="parameters" element="tns:SqaureRoot" />
+  </wsdl:message>
+  <wsdl:message name="IScientificCalculator_SqaureRoot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SqaureRootResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ICalculator">
+    <wsdl:operation name="Add">
+      <wsdl:input wsaw:Action="mydomain.com/mathservice/ICalculator/Add" message="tns:ICalculator_Add_InputMessage" />
+      <wsdl:output wsaw:Action="mydomain.com/mathservice/ICalculator/AddResponse" message="tns:ICalculator_Add_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Multiply">
+      <wsdl:input wsaw:Action="mydomain.com/mathservice/ICalculator/Multiply" message="tns:ICalculator_Multiply_InputMessage" />
+      <wsdl:output wsaw:Action="mydomain.com/mathservice/ICalculator/MultiplyResponse" message="tns:ICalculator_Multiply_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Divide">
+      <wsdl:input wsaw:Action="mydomain.com/mathservice/ICalculator/Divide" message="tns:ICalculator_Divide_InputMessage" />
+      <wsdl:output wsaw:Action="mydomain.com/mathservice/ICalculator/DivideResponse" message="tns:ICalculator_Divide_OutputMessage" />
+      <wsdl:fault wsaw:Action="mydomain.com/mathservice/ICalculator/DivideMathFaultFault" name="MathFaultFault" message="tns:ICalculator_Divide_MathFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComplex">
+      <wsdl:input wsaw:Action="mydomain.com/mathservice/ICalculator/AddComplex" message="tns:ICalculator_AddComplex_InputMessage" />
+      <wsdl:output wsaw:Action="mydomain.com/mathservice/ICalculator/AddComplexResponse" message="tns:ICalculator_AddComplex_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IScientificCalculator">
+    <wsdl:operation name="Pow">
+      <wsdl:input wsaw:Action="mydomain.com/mathservice/IScientificCalculator/Pow" message="tns:IScientificCalculator_Pow_InputMessage" />
+      <wsdl:output wsaw:Action="mydomain.com/mathservice/IScientificCalculator/PowResponse" message="tns:IScientificCalculator_Pow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SqaureRoot">
+      <wsdl:input wsaw:Action="mydomain.com/mathservice/IScientificCalculator/SqaureRoot" message="tns:IScientificCalculator_SqaureRoot_InputMessage" />
+      <wsdl:output wsaw:Action="mydomain.com/mathservice/IScientificCalculator/SqaureRootResponse" message="tns:IScientificCalculator_SqaureRoot_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

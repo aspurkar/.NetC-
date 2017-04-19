@@ -1,0 +1,37 @@
+﻿@model PartialViewChildActions.Models.Student
+
+@{
+    ViewBag.Title = "show";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>show</h2>
+
+<fieldset>
+    <legend>Student</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Mpbile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Mpbile)
+    </div>
+    <p>Address:
+     @Html.Partial("_Address",@Model.Address)
+    </p>
+</fieldset>
+

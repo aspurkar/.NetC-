@@ -1,0 +1,4 @@
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WCFDemo1\bin\WCFDemo1.dll
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WCFDemo1\bin\WCFDemo1.pdb
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WCFDemo1\obj\Debug\WCFDemo1.dll
+c:\Users\ccit\Documents\Visual Studio 2012\Projects\WCFDemo1\WCFDemo1\obj\Debug\WCFDemo1.pdb

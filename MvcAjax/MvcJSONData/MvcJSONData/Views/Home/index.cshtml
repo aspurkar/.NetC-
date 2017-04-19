@@ -1,0 +1,83 @@
+﻿@model IEnumerable<MvcJSONData.Models.Customer>
+
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>index</h2>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var customer in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(customer.Name, "Details", new { customerid = customer.CustomerId }, new {@class="customerlink",custid=customer.CustomerId})
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => customer.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => customer.Mobile)
+        </td>
+    </tr>
+}
+</table>
+<div id="details" style="display:none;">
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td><span id="cname"></span></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><span id="cemail"></span></td>
+        </tr>
+        <tr>
+            <td>Mobile:</td>
+            <td><span id="cmobile"></span></td>
+        </tr>
+    </table>
+</div>
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".customerlink").click(function (e) {
+                e.preventDefault();
+               //approach 1
+                var url = $(this).attr('href');
+                //$.getJSON(url, null, function (data, status, xhr) {
+                //    $("#details").fadeIn();
+                //    var cust = data;
+                //    $("#cname").text(cust.Name);
+                //    $("#cemail").text(cust.Email);
+                //    $("#cmobile").text(cust.Mobile);
+                //});
+
+                //approach 2
+                var url2 = '@Url.Action("details2", "home")';
+                var custid=$(this).attr('custid');
+                $.post(url2,{'customerid':custid},function(data, status, xhr){
+                    $("#details").fadeIn();
+                    var cust = data;
+                    $("#cname").text(cust.Name);
+                    $("#cemail").text(cust.Email);
+                    $("#cmobile").text(cust.Mobile);
+                },'json');
+
+            });
+        });
+    </script>
+}
